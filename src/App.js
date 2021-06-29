@@ -8,37 +8,37 @@ const postList = [
     {
         id: 1,
         title: "아이패드 프로 4세대 12.9 128기가 판매합니다",
-        poster: "/images/111.PNG",
+        poster: "/img/111.PNG",
         summary: "설명란?",
     },
     {
         id: 2,
         title: "갤럭시 버즈 화이트 팝니다.",
-        poster: "/images/222.PNG",
+        poster: "/img/222.PNG",
         summary: "설명란",
     },
     {
         id: 3,
         title: "아이패드 프로 2세대 12.9 스마트 폴리오 키보드 판매합니다.(택포)",
-        poster: "/images/333.PNG",
+        poster: "/img/333.PNG",
         summary: "설명란",
     },
     {
         id: 4,
         title: "아이패드 프로 4세대 12.9 128기가 판매합니다",
-        poster: "/images/111.PNG",
+        poster: "/img/111.PNG",
         summary: "설명란?",
     },
     {
         id: 5,
         title: "갤럭시 버즈 화이트 팝니다.",
-        poster: "/images/222.PNG",
+        poster: "/img/222.PNG",
         summary: "설명란",
     },
     {
         id: 6,
         title: "아이패드 프로 2세대 12.9 스마트 폴리오 키보드 판매합니다.(택포)",
-        poster: "/images/333.PNG",
+        poster: "/img/333.PNG",
         summary: "설명란",
     },
 ];

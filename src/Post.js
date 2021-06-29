@@ -2,14 +2,13 @@ import React from "react";
 import "./Post.css";
 import PropTypes from "prop-types";
 
-function Post({ id, title, poster, summary }) {
-    console.log(poster);
+function Post({ title, poster, summary }) {
     return (
-        <div class="post">
+        <div className="post">
             <img src={poster} alt="" />
-            <div class="post_data">
-                <h3 class="post_title">{title}</h3>
-                <p class="post_summary">{summary}</p>
+            <div className="post_data">
+                <h3 className="post_title">{title}</h3>
+                <p className="post_summary">{summary}</p>
             </div>
         </div>
     );
