@@ -5,10 +5,15 @@ import PropTypes from "prop-types";
 function Post({ title, poster, summary }) {
     return (
         <div className="post">
-            <img src={process.env.PUBLIC_URL + poster} alt="" />
+            <a href={summary} target="_blank">
+                <img src={process.env.PUBLIC_URL + poster} alt="" />
+            </a>
             <div className="post_data">
-                <h3 className="post_title">{title}</h3>
-                <p className="post_summary">{summary}</p>
+                <a href={summary} target="_blank">
+                    <h3 className="post_title">{title}</h3>
+                </a>
+
+                {/* <p className="post_summary">{summary}</p> */}
             </div>
         </div>
     );
