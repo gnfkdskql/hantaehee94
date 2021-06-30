@@ -57,7 +57,7 @@ const postList = [
         id: 9,
         title: "도서 판매글 2013년 2월 14일 12시 20분 수정 글입니다.",
         poster: "/img/empty.PNG",
-        summary: "https://cafe.naver.com/joonggonara/509746091",
+        summary: "https://cafe.naver.com/joonggonara/149077498",
     },
 ];
 
