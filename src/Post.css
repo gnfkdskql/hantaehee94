@@ -60,3 +60,40 @@
     margin-right: 10px;
     font-size: 14px;
 } */
+
+/*                         Mobile CSS                           */
+/* .m__posts .post {
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+} */
+
+/* 미친 css를 이용한 센터크롭의 정수다 ㄹㅇ루다가 */
+.m__make_rect {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.m__make_rect img {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+}
+
+.m__post .m__post_title {
+    /* 글자 넘칠경우 ...으로 치환 */
+    display: inline-block;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: black;
+}

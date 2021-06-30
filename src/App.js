@@ -3,6 +3,8 @@ import axios from "axios";
 import Post from "./Post.js";
 import "./App.css";
 import HorizonLine from "./utils/HorizontallLine.js";
+import mHorizonLine from "./utils/mHorizontallLine.js";
+import { BrowserView, MobileView } from "react-device-detect";
 
 const postList = [
     {
@@ -116,61 +118,178 @@ class App extends React.Component {
                     </div>
                 ) : (
                     <div>
-                        <div className="topBar">
-                            <h1>중고거래신용보증협회</h1>
-                            <div className="nav">
-                                <a href={landingLink} target="_blank">
-                                    <button className="button">Login</button>
-                                </a>
-                                <button className="button">Join</button>
-                            </div>
-                        </div>
-
-                        <div className="main_content">
-                            <div className="left item"></div>
-                            <div className="information">
-                                <div className="private">
-                                    <HorizonLine />
-                                    <h2 id="info">한태희</h2>
-                                    <p id="private_in">정회원</p>
-                                    <HorizonLine />
+                        <BrowserView>
+                            <div className="topBar">
+                                <h1 id="h1">중고거래신용보증협회</h1>
+                                <div className="nav">
+                                    <a href={landingLink} target="_blank" rel="noopener noreferrer">
+                                        <button className="button">Login</button>
+                                    </a>
+                                    <a href={landingLink} target="_blank" rel="noopener noreferrer">
+                                        <button className="button">Join</button>
+                                    </a>
                                 </div>
-                                <div className="history">
-                                    <p id="nickname">중고나라: melbourner</p>
-                                    <p id="detail">
-                                        방문: 1,696회
-                                        <br />
-                                        게시글: 76개
-                                        <br />
-                                        댓글: 272개
-                                    </p>
-                                    <p id="nickname">당근마켓: 닉네임</p>
-                                    <p id="detail">활동내역</p>
-                                    <p id="nickname">번개장터: 닉네임</p>
-                                    <p id="detail">활동내역</p>
-                                    <div className="last_underline">
+                            </div>
+
+                            <div className="main_content">
+                                <div className="left item"></div>
+                                <div className="information">
+                                    <div className="private">
+                                        <HorizonLine />
+                                        <h2 id="info">한태희</h2>
+                                        <p id="private_in">정회원</p>
                                         <HorizonLine />
                                     </div>
+                                    <div className="history">
+                                        <p id="nickname">중고나라: melbourner</p>
+                                        <p id="detail">
+                                            방문: 1,696회
+                                            <br />
+                                            게시글: 76개
+                                            <br />
+                                            댓글: 272개
+                                        </p>
+                                        <p id="nickname">당근마켓: 닉네임</p>
+                                        <p id="detail">활동내역</p>
+                                        <p id="nickname">번개장터: 닉네임</p>
+                                        <p id="detail">활동내역</p>
+                                        <div className="last_underline">
+                                            <HorizonLine />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="item main_page">
+                                    <div className="posts">
+                                        {posts.map((post) => (
+                                            <Post
+                                                key={post.id}
+                                                id={post.id}
+                                                title={post.title}
+                                                poster={post.poster}
+                                                summary={post.summary}
+                                            />
+                                        ))}
+                                    </div>
+                                    <a href={moreLink} target="_blank" rel="noopener noreferrer">
+                                        <button id="moreBtn">more</button>
+                                    </a>
+                                </div>
+                                <div className="right item"></div>
+                            </div>
+                        </BrowserView>
+                        <MobileView>
+                            <div className="m__body">
+                                <div className="m__topBar">
+                                    <h1 id="m__h1">중고거래신용보증협회</h1>
+                                    <div className="m__nav">
+                                        <a
+                                            href={landingLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <button className="m__button">Login</button>
+                                        </a>
+                                        <a
+                                            href={landingLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <button className="m__button">Join</button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="m__information">
+                                    <div className="m__private">
+                                        <img
+                                            src={process.env.PUBLIC_URL + "/img/profile.png"}
+                                            alt=""
+                                        ></img>
+                                        <div className="m__text">
+                                            <p id="m__private_in">정회원</p>
+                                            <p id="m__info">한태희</p>
+                                        </div>
+                                    </div>
+                                    <div className="m__history">
+                                        <div className="m__jungo m__platform">
+                                            <div className="m__jungoTop">
+                                                <p id="m__nickname">중고나라: melbourner</p>
+                                            </div>
+                                            <div className="m__jungoBottom">
+                                                <div className="m__visit item">
+                                                    <p id="m__bottomText">방문</p>
+                                                    <p id="m__bottomNum">1,696</p>
+                                                </div>
+                                                <div className="m__post item">
+                                                    <p id="m__bottomText">게시글</p>
+                                                    <p id="m__bottomNum">76</p>
+                                                </div>
+                                                <div className="m__comment item">
+                                                    <p id="m__bottomText">댓글</p>
+                                                    <p id="m__bottomNum">272</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="m__thunder m__platform">
+                                            <div className="m__thunderTop">
+                                                <p id="m__nickname">번개장터: 닉네임</p>
+                                            </div>
+                                            <div className="m__thunderBottom">
+                                                <div className="m__visit item">
+                                                    <p id="m__bottomText">후기</p>
+                                                    <p id="m__bottomNum">0</p>
+                                                </div>
+                                                <div className="m__post item">
+                                                    <p id="m__bottomText">팔로잉</p>
+                                                    <p id="m__bottomNum">0</p>
+                                                </div>
+                                                <div className="m__comment item">
+                                                    <p id="m__bottomText">팔로잉</p>
+                                                    <p id="m__bottomNum">0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="m__carrot m__platform">
+                                            <div className="m__carrotTop">
+                                                <p id="m__nickname">당근마켓: 닉네임</p>
+                                            </div>
+                                            <div className="m__carrotBottom">
+                                                <div className="m__visit item">
+                                                    <p id="m__bottomText">후기</p>
+                                                    <p id="m__bottomNum">0</p>
+                                                </div>
+                                                <div className="m__post item">
+                                                    <p id="m__bottomText">팔로잉</p>
+                                                    <p id="m__bottomNum">0</p>
+                                                </div>
+                                                <div className="m__comment item">
+                                                    <p id="m__bottomText">팔로잉</p>
+                                                    <p id="m__bottomNum">0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="m__last_underline"></div>
+                                    </div>
+                                </div>
+                                <div className="m__item m__main_page">
+                                    <div className="m__posts">
+                                        {posts.map((post) => (
+                                            <Post
+                                                key={post.id}
+                                                id={post.id}
+                                                title={post.title}
+                                                poster={post.poster}
+                                                summary={post.summary}
+                                            />
+                                        ))}
+                                    </div>
+                                    <a href={moreLink} target="_blank" rel="noopener noreferrer">
+                                        <button id="m__moreBtn">more</button>
+                                    </a>
                                 </div>
                             </div>
-                            <div className="item main_page">
-                                <div className="posts">
-                                    {posts.map((post) => (
-                                        <Post
-                                            key={post.id}
-                                            id={post.id}
-                                            title={post.title}
-                                            poster={post.poster}
-                                            summary={post.summary}
-                                        />
-                                    ))}
-                                </div>
-                                <a href={moreLink} target="_blank">
-                                    <button id="moreBtn">more</button>
-                                </a>
-                            </div>
-                            <div className="right item"></div>
-                        </div>
+                        </MobileView>
                     </div>
                 )}
             </section>
