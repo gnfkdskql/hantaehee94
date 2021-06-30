@@ -41,12 +41,34 @@ const postList = [
         poster: "/img/666.PNG",
         summary: "https://cafe.naver.com/joonggonara/509746091",
     },
+    {
+        id: 7,
+        title: "컴퓨터부품 판매합니다.(가격인하) 직거래, 택배가능",
+        poster: "/img/777.PNG",
+        summary: "https://cafe.naver.com/joonggonara/375190549",
+    },
+    {
+        id: 8,
+        title: "에일린기타 레스풀타입, 팬더 프론트맨15G 팝니다!(급매!!!)",
+        poster: "/img/888.PNG",
+        summary: "https://cafe.naver.com/joonggonara/314176226",
+    },
+    {
+        id: 9,
+        title: "도서 판매글 2013년 2월 14일 12시 20분 수정 글입니다.",
+        poster: "/img/empty.PNG",
+        summary: "https://cafe.naver.com/joonggonara/509746091",
+    },
 ];
+
+const moreLink =
+    "https://cafe.naver.com/joonggonara?iframe_url=/CafeMemberNetworkView.nhn%3Fm=view%26clubid=10050146%26memberid=hantaehee94#";
 
 class App extends React.Component {
     state = {
         isLoading: true,
         posts: [],
+        moreLink: "",
     };
 
     handleClick = () => {
@@ -78,6 +100,7 @@ class App extends React.Component {
         setTimeout(() => {
             this.setState({ isLoading: false });
         }, 100);
+        this.setState({ moreLink: moreLink });
     }
 
     render() {
@@ -129,16 +152,21 @@ class App extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="posts item">
-                                {posts.map((post) => (
-                                    <Post
-                                        key={post.id}
-                                        id={post.id}
-                                        title={post.title}
-                                        poster={post.poster}
-                                        summary={post.summary}
-                                    />
-                                ))}
+                            <div className="item main_page">
+                                <div className="posts">
+                                    {posts.map((post) => (
+                                        <Post
+                                            key={post.id}
+                                            id={post.id}
+                                            title={post.title}
+                                            poster={post.poster}
+                                            summary={post.summary}
+                                        />
+                                    ))}
+                                </div>
+                                <a href={moreLink} target="_blank">
+                                    <button id="moreBtn">more</button>
+                                </a>
                             </div>
                             <div className="right item"></div>
                         </div>

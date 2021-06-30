@@ -12,6 +12,7 @@
 .item:nth-child(2) {
     flex-grow: 3;
 }
+
 .item:nth-child(4) {
     flex-grow: 2;
 }
@@ -93,6 +94,9 @@ h1 {
     margin-top: 70px;
 }
 
+.main_page {
+    text-align-last: center;
+}
 .posts {
     margin-left: 20px;
     display: grid;
@@ -108,4 +112,30 @@ h1 {
         grid-template-columns: 1fr;
         width: 100%;
     }
+}
+
+#moreBtn {
+    width: 140px;
+    height: 45px;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+#moreBtn:hover {
+    background-color: #2ee59d;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
 }
