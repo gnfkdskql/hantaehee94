@@ -64,8 +64,11 @@ const postList = [
 const moreLink =
     "https://cafe.naver.com/joonggonara?iframe_url=/CafeMemberNetworkView.nhn%3Fm=view%26clubid=10050146%26memberid=hantaehee94#";
 
+const landingLink = "https://studiotaea.imweb.me/";
+
 class App extends React.Component {
     state = {
+        landingLink: "",
         isLoading: true,
         posts: [],
         moreLink: "",
@@ -116,12 +119,10 @@ class App extends React.Component {
                         <div className="topBar">
                             <h1>중고거래신용보증협회</h1>
                             <div className="nav">
-                                <button className="button" onClick={this.handleClick}>
-                                    Login
-                                </button>
-                                <button className="button" onClick={this.handleClick}>
-                                    Signup
-                                </button>
+                                <a href={landingLink} target="_blank">
+                                    <button className="button">Login</button>
+                                </a>
+                                <button className="button">Join</button>
                             </div>
                         </div>
 
