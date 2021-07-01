@@ -91,6 +91,7 @@ function Post({ title, poster, summary, junggo, thunder, carrot }) {
                         {/* <p className="post_summary">{summary}</p> */}
                     </div>
                     <DropdownButton
+                        variant="secondary"
                         alignRight
                         className="postDropdown"
                         id="dropdown-basic-button"
