@@ -162,13 +162,14 @@ class App extends React.Component {
                                             <br />
                                             댓글: 272개
                                         </p>
-                                        <p id="nickname">당근마켓: 닉네임</p>
+                                        <p id="nickname">번개장터: hantaehee9</p>
                                         <p id="detail">
                                             후기: 0<br />
                                             상품: 2<br />
                                             팔로워: 0
                                         </p>
-                                        <p id="nickname">번개장터: hantaehee9</p>
+                                        <p id="nickname">당근마켓: 닉네임</p>
+
                                         <p id="detail">활동내역</p>
                                         <div className="last_underline">
                                             <HorizonLine />
