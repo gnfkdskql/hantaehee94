@@ -3,30 +3,43 @@ import axios from "axios";
 import Post from "./Post.js";
 import "./App.css";
 import HorizonLine from "./utils/HorizontallLine.js";
-import mHorizonLine from "./utils/mHorizontallLine.js";
 import { BrowserView, MobileView } from "react-device-detect";
 
 const postList = [
     {
-        id: 1,
+        id: 11,
+        title: "아이패드 에어4 64gb 와이파이 모델 팝니다.",
+        poster: "/img/11.PNG",
+        summary:
+            "https://m.bunjang.co.kr/products/158036107?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
+    },
+    {
+        id: 10,
+        title: "버즈라이브 택포 9만원",
+        poster: "/img/10.PNG",
+        summary:
+            "https://m.bunjang.co.kr/products/158036550?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
+    },
+    {
+        id: 9,
         title: "아이패드 프로 4세대 12.9 128기가 판매합니다",
         poster: "/img/111.PNG",
         summary: "https://cafe.naver.com/joonggonara/836077538",
     },
     {
-        id: 2,
+        id: 8,
         title: "갤럭시 버즈 화이트 팝니다.",
         poster: "/img/222.PNG",
         summary: "https://cafe.naver.com/joonggonara/812930528",
     },
     {
-        id: 3,
+        id: 7,
         title: "아이패드 프로 2세대 12.9 스마트 폴리오 키보드 판매합니다.(택포)",
         poster: "/img/333.PNG",
         summary: "https://cafe.naver.com/joonggonara/773619742",
     },
     {
-        id: 4,
+        id: 6,
         title: "(미개봉)iPhone 아이폰 Xs 정품 가죽 폴리오 케이스 판매합니다.(직,택)",
         poster: "/img/444.PNG",
         summary: "https://cafe.naver.com/joonggonara/772190690",
@@ -38,25 +51,25 @@ const postList = [
         summary: "https://cafe.naver.com/joonggonara/827459778",
     },
     {
-        id: 6,
+        id: 4,
         title: "PS4 스파이더맨 리미티드 에디션 양도합니다",
         poster: "/img/666.PNG",
         summary: "https://cafe.naver.com/joonggonara/509746091",
     },
     {
-        id: 7,
+        id: 3,
         title: "컴퓨터부품 판매합니다.(가격인하) 직거래, 택배가능",
         poster: "/img/777.PNG",
         summary: "https://cafe.naver.com/joonggonara/375190549",
     },
     {
-        id: 8,
+        id: 2,
         title: "에일린기타 레스풀타입, 팬더 프론트맨15G 팝니다!(급매!!!)",
         poster: "/img/888.PNG",
         summary: "https://cafe.naver.com/joonggonara/314176226",
     },
     {
-        id: 9,
+        id: 1,
         title: "도서 판매글 2013년 2월 14일 12시 20분 수정 글입니다.",
         poster: "/img/empty.PNG",
         summary: "https://cafe.naver.com/joonggonara/149077498",
@@ -150,8 +163,12 @@ class App extends React.Component {
                                             댓글: 272개
                                         </p>
                                         <p id="nickname">당근마켓: 닉네임</p>
-                                        <p id="detail">활동내역</p>
-                                        <p id="nickname">번개장터: 닉네임</p>
+                                        <p id="detail">
+                                            후기: 0<br />
+                                            상품: 2<br />
+                                            팔로워: 0
+                                        </p>
+                                        <p id="nickname">번개장터: hantaehee9</p>
                                         <p id="detail">활동내역</p>
                                         <div className="last_underline">
                                             <HorizonLine />
@@ -231,7 +248,7 @@ class App extends React.Component {
                                         </div>
                                         <div className="m__thunder m__platform">
                                             <div className="m__thunderTop">
-                                                <p id="m__nickname">번개장터: 닉네임</p>
+                                                <p id="m__nickname">번개장터: hantaehee9</p>
                                             </div>
                                             <div className="m__thunderBottom">
                                                 <div className="m__visit item">
@@ -239,11 +256,11 @@ class App extends React.Component {
                                                     <p id="m__bottomNum">0</p>
                                                 </div>
                                                 <div className="m__post item">
-                                                    <p id="m__bottomText">팔로잉</p>
-                                                    <p id="m__bottomNum">0</p>
+                                                    <p id="m__bottomText">상품</p>
+                                                    <p id="m__bottomNum">2</p>
                                                 </div>
                                                 <div className="m__comment item">
-                                                    <p id="m__bottomText">팔로잉</p>
+                                                    <p id="m__bottomText">팔로워</p>
                                                     <p id="m__bottomNum">0</p>
                                                 </div>
                                             </div>
@@ -263,7 +280,7 @@ class App extends React.Component {
                                                     <p id="m__bottomNum">0</p>
                                                 </div>
                                                 <div className="m__comment item">
-                                                    <p id="m__bottomText">팔로잉</p>
+                                                    <p id="m__bottomText">팔로워</p>
                                                     <p id="m__bottomNum">0</p>
                                                 </div>
                                             </div>
