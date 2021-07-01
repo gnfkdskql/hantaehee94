@@ -2,6 +2,12 @@ import React from "react";
 import "./Post.css";
 import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 import PropTypes from "prop-types";
+import M from "materialize-css";
+
+document.addEventListener("DOMContentLoaded", function () {
+    var elems = document.querySelectorAll(".tn dropdown-trigger");
+    var instances = M.Dropdown.init(elems);
+});
 
 function Post({ title, poster, summary }) {
     return (
@@ -11,6 +17,7 @@ function Post({ title, poster, summary }) {
                     <a href={summary} target="_blank" rel="noopener noreferrer">
                         <img src={process.env.PUBLIC_URL + poster} alt="" />
                     </a>
+
                     <div className="post_data">
                         <a href={summary} target="_blank" rel="noopener noreferrer">
                             <h3 className="post_title">{title}</h3>

@@ -133,7 +133,7 @@ class App extends React.Component {
                     <div>
                         <BrowserView>
                             <div className="topBar">
-                                <h1 id="h1">중고거래신용보증협회</h1>
+                                <h1 id="headline">중고거래신용보증협회</h1>
                                 <div className="nav">
                                     <a href={landingLink} target="_blank" rel="noopener noreferrer">
                                         <button className="button">Login</button>
