@@ -3,13 +3,11 @@ import "./Post.css";
 import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
 import PropTypes from "prop-types";
 import M from "materialize-css";
+import { Dropdown, DropdownButton, Button } from "react-bootstrap";
+require("bootstrap/dist/css/bootstrap.css");
 
-document.addEventListener("DOMContentLoaded", function () {
-    var elems = document.querySelectorAll(".tn dropdown-trigger");
-    var instances = M.Dropdown.init(elems);
-});
-
-function Post({ title, poster, summary }) {
+function Post({ title, poster, summary, junggo, thunder, carrot }) {
+    console.log(junggo);
     return (
         <div>
             <BrowserView>
@@ -17,13 +15,63 @@ function Post({ title, poster, summary }) {
                     <a href={summary} target="_blank" rel="noopener noreferrer">
                         <img src={process.env.PUBLIC_URL + poster} alt="" />
                     </a>
-
                     <div className="post_data">
                         <a href={summary} target="_blank" rel="noopener noreferrer">
                             <h3 className="post_title">{title}</h3>
                         </a>
                         {/* <p className="post_summary">{summary}</p> */}
                     </div>
+
+                    <DropdownButton
+                        alignRight
+                        className="postDropdown"
+                        id="dropdown-basic-button"
+                        title="링크"
+                    >
+                        {junggo === "" ? (
+                            <Dropdown.Item disabled eventKey="1">
+                                중고나라
+                            </Dropdown.Item>
+                        ) : (
+                            <Dropdown.Item
+                                href={junggo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                eventKey="1"
+                            >
+                                중고나라
+                            </Dropdown.Item>
+                        )}
+                        {thunder === "" ? (
+                            <Dropdown.Item disabled eventKey="2">
+                                번개장터
+                            </Dropdown.Item>
+                        ) : (
+                            <Dropdown.Item
+                                href={thunder}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                eventKey="2"
+                            >
+                                번개장터
+                            </Dropdown.Item>
+                        )}
+
+                        {carrot === "" ? (
+                            <Dropdown.Item disabled eventKey="3">
+                                당근마켓
+                            </Dropdown.Item>
+                        ) : (
+                            <Dropdown.Item
+                                href={carrot}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                eventKey="3"
+                            >
+                                당근마켓
+                            </Dropdown.Item>
+                        )}
+                    </DropdownButton>
                 </div>
             </BrowserView>
             <MobileView>
@@ -40,6 +88,56 @@ function Post({ title, poster, summary }) {
 
                         {/* <p className="post_summary">{summary}</p> */}
                     </div>
+                    <DropdownButton
+                        alignRight
+                        className="postDropdown"
+                        id="dropdown-basic-button"
+                        title="링크"
+                    >
+                        {junggo === "" ? (
+                            <Dropdown.Item disabled eventKey="1">
+                                중고나라
+                            </Dropdown.Item>
+                        ) : (
+                            <Dropdown.Item
+                                href={junggo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                eventKey="1"
+                            >
+                                중고나라
+                            </Dropdown.Item>
+                        )}
+                        {thunder === "" ? (
+                            <Dropdown.Item disabled eventKey="2">
+                                번개장터
+                            </Dropdown.Item>
+                        ) : (
+                            <Dropdown.Item
+                                href={thunder}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                eventKey="2"
+                            >
+                                번개장터
+                            </Dropdown.Item>
+                        )}
+
+                        {carrot === "" ? (
+                            <Dropdown.Item disabled eventKey="3">
+                                당근마켓
+                            </Dropdown.Item>
+                        ) : (
+                            <Dropdown.Item
+                                href={carrot}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                eventKey="3"
+                            >
+                                당근마켓
+                            </Dropdown.Item>
+                        )}
+                    </DropdownButton>
                 </div>
             </MobileView>
         </div>

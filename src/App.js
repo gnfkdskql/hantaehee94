@@ -4,6 +4,7 @@ import Post from "./Post.js";
 import "./App.css";
 import HorizonLine from "./utils/HorizontallLine.js";
 import { BrowserView, MobileView } from "react-device-detect";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 
 const postList = [
     {
@@ -12,6 +13,10 @@ const postList = [
         poster: "/img/11.PNG",
         summary:
             "https://m.bunjang.co.kr/products/158036107?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
+        junggo: "",
+        thunder:
+            "https://m.bunjang.co.kr/products/158036107?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
+        carrot: "",
     },
     {
         id: 10,
@@ -19,60 +24,91 @@ const postList = [
         poster: "/img/10.PNG",
         summary:
             "https://m.bunjang.co.kr/products/158036550?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
+        junggo: "",
+        thunder:
+            "https://m.bunjang.co.kr/products/158036550?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
+        carrot: "",
     },
     {
         id: 9,
         title: "아이패드 프로 4세대 12.9 128기가 판매합니다",
         poster: "/img/111.PNG",
         summary: "https://cafe.naver.com/joonggonara/836077538",
+        junggo: "https://cafe.naver.com/joonggonara/836077538",
+        thunder: "",
+        carrot: "",
     },
     {
         id: 8,
         title: "갤럭시 버즈 화이트 팝니다.",
         poster: "/img/222.PNG",
         summary: "https://cafe.naver.com/joonggonara/812930528",
+        junggo: "https://cafe.naver.com/joonggonara/812930528",
+        thunder: "",
+        carrot: "",
     },
     {
         id: 7,
         title: "아이패드 프로 2세대 12.9 스마트 폴리오 키보드 판매합니다.(택포)",
         poster: "/img/333.PNG",
         summary: "https://cafe.naver.com/joonggonara/773619742",
+        junggo: "https://cafe.naver.com/joonggonara/773619742",
+        thunder: "",
+        carrot: "",
     },
     {
         id: 6,
         title: "(미개봉)iPhone 아이폰 Xs 정품 가죽 폴리오 케이스 판매합니다.(직,택)",
         poster: "/img/444.PNG",
         summary: "https://cafe.naver.com/joonggonara/772190690",
+        junggo: "https://cafe.naver.com/joonggonara/772190690",
+        thunder: "",
+        carrot: "",
     },
     {
         id: 5,
         title: "(미개봉) 에어팟 2세대 유선모델 팝니다(택포 12.5만)",
         poster: "/img/555.PNG",
         summary: "https://cafe.naver.com/joonggonara/827459778",
+        junggo: "https://cafe.naver.com/joonggonara/827459778",
+        thunder: "",
+        carrot: "",
     },
     {
         id: 4,
         title: "PS4 스파이더맨 리미티드 에디션 양도합니다",
         poster: "/img/666.PNG",
         summary: "https://cafe.naver.com/joonggonara/509746091",
+        junggo: "https://cafe.naver.com/joonggonara/509746091",
+        thunder: "",
+        carrot: "",
     },
     {
         id: 3,
         title: "컴퓨터부품 판매합니다.(가격인하) 직거래, 택배가능",
         poster: "/img/777.PNG",
         summary: "https://cafe.naver.com/joonggonara/375190549",
+        junggo: "https://cafe.naver.com/joonggonara/375190549",
+        thunder: "",
+        carrot: "",
     },
     {
         id: 2,
         title: "에일린기타 레스풀타입, 팬더 프론트맨15G 팝니다!(급매!!!)",
         poster: "/img/888.PNG",
         summary: "https://cafe.naver.com/joonggonara/314176226",
+        junggo: "https://cafe.naver.com/joonggonara/314176226",
+        thunder: "",
+        carrot: "",
     },
     {
         id: 1,
         title: "도서 판매글 2013년 2월 14일 12시 20분 수정 글입니다.",
         poster: "/img/empty.PNG",
         summary: "https://cafe.naver.com/joonggonara/149077498",
+        junggo: "https://cafe.naver.com/joonggonara/149077498",
+        thunder: "",
+        carrot: "",
     },
 ];
 
@@ -185,6 +221,9 @@ class App extends React.Component {
                                                 title={post.title}
                                                 poster={post.poster}
                                                 summary={post.summary}
+                                                junggo={post.junggo}
+                                                thunder={post.thunder}
+                                                carrot={post.carrot}
                                             />
                                         ))}
                                     </div>
@@ -299,6 +338,9 @@ class App extends React.Component {
                                                 title={post.title}
                                                 poster={post.poster}
                                                 summary={post.summary}
+                                                junggo={post.junggo}
+                                                thunder={post.thunder}
+                                                carrot={post.carrot}
                                             />
                                         ))}
                                     </div>
