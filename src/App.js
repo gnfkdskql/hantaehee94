@@ -186,6 +186,7 @@ class App extends React.Component {
                                     <div className="private">
                                         <HorizonLine />
                                         <h2 id="info">한태희</h2>
+                                        <p id="phoneNum">010-6349-1413</p>
                                         <p id="private_in">정회원</p>
                                         <HorizonLine />
                                     </div>
@@ -262,9 +263,10 @@ class App extends React.Component {
                                             alt=""
                                         ></img>
                                         <div className="m__text">
-                                            <p id="m__private_in">정회원</p>
                                             <p id="m__info">한태희</p>
+                                            <p id="m__phoneNum">010-6349-1413</p>
                                         </div>
+                                        <p id="m__private_in">정회원</p>
                                     </div>
                                     <div className="m__history">
                                         <div className="m__jungo m__platform">

@@ -81,8 +81,16 @@ h1 {
     font-size: 27px;
 }
 
+#phoneNum {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 #private_in {
-    margin-left: auto;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 30px;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
 .history {
@@ -220,17 +228,24 @@ h1 {
 } */
 
 .m__private #m__private_in {
-    margin-right: 50px;
-    margin-bottom: 5px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-right: 100px;
     font-weight: 200;
     font-size: 10px;
 }
 
 .m__private #m__info {
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     font-weight: 700;
     font-size: 24px;
+}
+
+#m__phoneNum {
+    margin-left: 3px;
+    margin-top: 0px;
 }
 
 .m__platform {
@@ -289,6 +304,7 @@ h1 {
     text-align: center;
 }
 #m__nickname {
+    margin-top: 25px;
     font-weight: 700;
     font-size: 22px;
 }

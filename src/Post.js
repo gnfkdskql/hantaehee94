@@ -23,10 +23,12 @@ function Post({ title, poster, summary, junggo, thunder, carrot }) {
                     </div>
 
                     <DropdownButton
+                        variant="secondary"
                         alignRight
                         className="postDropdown"
                         id="dropdown-basic-button"
                         title="링크"
+                        size="nor"
                     >
                         {junggo === "" ? (
                             <Dropdown.Item disabled eventKey="1">
