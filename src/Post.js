@@ -12,13 +12,9 @@ function Post({ title, poster, summary, junggo, thunder, carrot }) {
         <div>
             <BrowserView>
                 <div className="post">
-                    <a href={summary} target="_blank" rel="noopener noreferrer">
-                        <img src={process.env.PUBLIC_URL + poster} alt="" />
-                    </a>
+                    <img src={process.env.PUBLIC_URL + poster} alt="" />
                     <div className="post_data">
-                        <a href={summary} target="_blank" rel="noopener noreferrer">
-                            <h3 className="post_title">{title}</h3>
-                        </a>
+                        <h3 className="post_title">{title}</h3>
                         {/* <p className="post_summary">{summary}</p> */}
                     </div>
 
@@ -78,15 +74,11 @@ function Post({ title, poster, summary, junggo, thunder, carrot }) {
             </BrowserView>
             <MobileView>
                 <div className="m__post">
-                    <a href={summary} target="_blank" rel="noopener noreferrer">
-                        <div className="m__make_rect">
-                            <img src={process.env.PUBLIC_URL + poster} alt="" />
-                        </div>
-                    </a>
+                    <div className="m__make_rect">
+                        <img src={process.env.PUBLIC_URL + poster} alt="" />
+                    </div>
                     <div className="m__post_data">
-                        <a href={summary} target="_blank" rel="noopener noreferrer">
-                            <h3 className="m__post_title">{title}</h3>
-                        </a>
+                        <h3 className="m__post_title">{title}</h3>
 
                         {/* <p className="post_summary">{summary}</p> */}
                     </div>

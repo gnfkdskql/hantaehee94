@@ -13,9 +13,8 @@ const postList = [
         poster: "/img/11.PNG",
         summary:
             "https://m.bunjang.co.kr/products/158036107?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
-        junggo: "",
-        thunder:
-            "https://m.bunjang.co.kr/products/158036107?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
+        junggo: "https://cafe.naver.com/joonggonara/851775886",
+        thunder: "https://m.bunjang.co.kr/products/158173006",
         carrot: "",
     },
     {
@@ -24,9 +23,8 @@ const postList = [
         poster: "/img/10.PNG",
         summary:
             "https://m.bunjang.co.kr/products/158036550?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
-        junggo: "",
-        thunder:
-            "https://m.bunjang.co.kr/products/158036550?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
+        junggo: "https://cafe.naver.com/joonggonara/851778199",
+        thunder: "https://m.bunjang.co.kr/products/158173779",
         carrot: "",
     },
     {
@@ -198,7 +196,7 @@ class App extends React.Component {
             description: "믿을 수 있는 중고거래",
             imageUrl: process.env.PUBLIC_URL + "/img/title.PNG",
         });
-        this.changingViewCnt();
+        // this.changingViewCnt();
     }
 
     render() {
@@ -265,7 +263,6 @@ class App extends React.Component {
                                                 id={post.id}
                                                 title={post.title}
                                                 poster={post.poster}
-                                                summary={post.summary}
                                                 junggo={post.junggo}
                                                 thunder={post.thunder}
                                                 carrot={post.carrot}
@@ -383,7 +380,6 @@ class App extends React.Component {
                                                 id={post.id}
                                                 title={post.title}
                                                 poster={post.poster}
-                                                summary={post.summary}
                                                 junggo={post.junggo}
                                                 thunder={post.thunder}
                                                 carrot={post.carrot}
