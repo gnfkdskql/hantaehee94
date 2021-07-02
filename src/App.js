@@ -149,12 +149,14 @@ class App extends React.Component {
     // };
 
     setMetaTags = ({
-        title = "중고거래신용보증협회",
-        description = "중고거래 신용의 시작",
-        imageUrl = "/img/888.PNG",
+        title = "기본 타이틀",
+        description = "기본 설명",
+        imageUrl = "기본 사이트 이미지 경로",
     }) => {
         //set title
-        document.querySelector('meta[property="og:title"]').setAttribute("content", `${title}`);
+        https: document
+            .querySelector('meta[property="og:title"]')
+            .setAttribute("content", `${title}`);
         //set description
         document
             .querySelector('meta[property="og:description"]')
@@ -176,8 +178,8 @@ class App extends React.Component {
         this.setState({ moreLink: moreLink });
         this.setMetaTags({
             title: "중고거래신용보증협회",
-            description: "중고 거래 신용의 시작",
-            imageUrl: "",
+            description: "믿을 수 있는 중고거래",
+            imageUrl: "/img/title.PNG",
         });
     }
 
