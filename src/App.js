@@ -179,7 +179,7 @@ class App extends React.Component {
         this.setMetaTags({
             title: "중고거래신용보증협회",
             description: "믿을 수 있는 중고거래",
-            imageUrl: "/img/title.PNG",
+            imageUrl: process.env.PUBLIC_URL + "/img/title.PNG",
         });
     }
 
