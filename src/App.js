@@ -148,6 +148,23 @@ class App extends React.Component {
     //     const movies = await axios.get("https://yts-proxy.now.sh/list_movies.json");
     // };
 
+    changingViewCnt = () => {
+        let data;
+
+        axios
+            .get("/tests")
+            .then((Response) => {
+                data = Response.data[0];
+                const view = parseInt(data.test1) + 1;
+                data.test1 = view.toString();
+                console.log(data);
+                axios.put("/tests/3", data);
+            })
+            .catch((Error) => {
+                console.log(Error);
+            });
+    };
+
     setMetaTags = ({
         title = "기본 타이틀",
         description = "기본 설명",
@@ -181,6 +198,7 @@ class App extends React.Component {
             description: "믿을 수 있는 중고거래",
             imageUrl: process.env.PUBLIC_URL + "/img/title.PNG",
         });
+        this.changingViewCnt();
     }
 
     render() {
