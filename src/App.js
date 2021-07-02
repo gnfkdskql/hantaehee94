@@ -148,6 +148,25 @@ class App extends React.Component {
     //     const movies = await axios.get("https://yts-proxy.now.sh/list_movies.json");
     // };
 
+    setMetaTags = ({
+        title = "기본 타이틀",
+        description = "기본 설명",
+        imageUrl = "기본 사이트 이미지 경로",
+    }) => {
+        //set title
+        document.querySelector('meta[property="og:title"]').setAttribute("content", `${title}`);
+        //set description
+        document
+            .querySelector('meta[property="og:description"]')
+            .setAttribute("content", description);
+        //set images
+        document.querySelector('meta[property="og:image"]').setAttribute("content", imageUrl);
+        //set url
+        document
+            .querySelector('meta[property="og:url"]')
+            .setAttribute("content", window.location.href);
+    };
+
     componentDidMount() {
         // this.getMovies();
         this.setState({ posts: postList });
@@ -155,6 +174,11 @@ class App extends React.Component {
             this.setState({ isLoading: false });
         }, 100);
         this.setState({ moreLink: moreLink });
+        this.setMetaTags({
+            title: "중고거래신용보증협회",
+            description: "중고 거래 신용의 시작",
+            imageUrl: "",
+        });
     }
 
     render() {
