@@ -6,8 +6,8 @@ import M from "materialize-css";
 import { Dropdown, DropdownButton, Button } from "react-bootstrap";
 require("bootstrap/dist/css/bootstrap.css");
 
-function Post({ title, poster, summary, junggo, thunder, carrot }) {
-    console.log(junggo);
+function Post({ title, poster, junggo, thunder, carrot }) {
+    // console.log(junggo);
     return (
         <div>
             <BrowserView>

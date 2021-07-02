@@ -313,8 +313,9 @@ h1 {
 
 .m__posts {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(2, minmax(20%, auto));
+    grid-gap: 20px;
     padding: 30px;
     /* width: 80%; */
     padding-top: 14px;

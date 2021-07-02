@@ -132,7 +132,7 @@ class App extends React.Component {
                 data = Response.data[0];
                 const view = parseInt(data.test1) + 1;
                 data.test1 = view.toString();
-                console.log(data);
+                // console.log(data);
                 axios.put("http://101.101.216.11:1337/tests/3", data);
             })
             .catch((Error) => {
