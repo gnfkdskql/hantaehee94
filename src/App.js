@@ -149,9 +149,9 @@ class App extends React.Component {
     // };
 
     setMetaTags = ({
-        title = "기본 타이틀",
-        description = "기본 설명",
-        imageUrl = "기본 사이트 이미지 경로",
+        title = "중고거래신용보증협회",
+        description = "중고거래 신용의 시작",
+        imageUrl = "/img/888.PNG",
     }) => {
         //set title
         document.querySelector('meta[property="og:title"]').setAttribute("content", `${title}`);
