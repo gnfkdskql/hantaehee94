@@ -177,7 +177,9 @@ class App extends React.Component {
             .querySelector('meta[property="og:description"]')
             .setAttribute("content", description);
         //set images
-        document.querySelector('meta[property="og:image"]').setAttribute("content", imageUrl);
+        document
+            .querySelector('meta[property="og:image"]')
+            .setAttribute("content", imageUrl);
         //set url
         document
             .querySelector('meta[property="og:url"]')
@@ -205,19 +207,35 @@ class App extends React.Component {
             <section className="container">
                 {isLoading ? (
                     <div className="loader">
-                        <span className="loader__text">Loading...</span>
+                        <span className="loader__text">
+                            Loading...
+                        </span>
                     </div>
                 ) : (
                     <div>
                         <BrowserView>
                             <div className="topBar">
-                                <h1 id="headline">중고거래신용보증협회</h1>
+                                <h1 id="headline">
+                                    중고거래신용보증협회
+                                </h1>
                                 <div className="nav">
-                                    <a href={landingLink} target="_blank" rel="noopener noreferrer">
-                                        <button className="button">Login</button>
+                                    <a
+                                        href={landingLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <button className="button">
+                                            Login
+                                        </button>
                                     </a>
-                                    <a href={landingLink} target="_blank" rel="noopener noreferrer">
-                                        <button className="button">Join</button>
+                                    <a
+                                        href={landingLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <button className="button">
+                                            Join
+                                        </button>
                                     </a>
                                 </div>
                             </div>
@@ -228,26 +246,34 @@ class App extends React.Component {
                                     <div className="private">
                                         <HorizonLine />
                                         <h2 id="info">한태희</h2>
-                                        <p id="phoneNum">010-6349-1413</p>
+                                        <p id="phoneNum">
+                                            010-6349-1413
+                                        </p>
                                         <p id="private_in">정회원</p>
                                         <HorizonLine />
                                     </div>
                                     <div className="history">
-                                        <p id="nickname">중고나라: melbourner</p>
-                                        <p id="detail">
-                                            방문: 1,696회
-                                            <br />
-                                            게시글: 76개
-                                            <br />
-                                            댓글: 272개
+                                        <p id="nickname">
+                                            중고나라: melbourner
                                         </p>
-                                        <p id="nickname">번개장터: hantaehee9</p>
+                                        <p id="detail">
+                                            방문: 1,719회
+                                            <br />
+                                            게시글: 79개
+                                            <br />
+                                            댓글: 273개
+                                        </p>
+                                        <p id="nickname">
+                                            번개장터: hantaehee9
+                                        </p>
                                         <p id="detail">
                                             후기: 0<br />
                                             상품: 2<br />
                                             팔로워: 0
                                         </p>
-                                        <p id="nickname">당근마켓: 닉네임</p>
+                                        <p id="nickname">
+                                            당근마켓: 닉네임
+                                        </p>
 
                                         <p id="detail">활동내역</p>
                                         <div className="last_underline">
@@ -269,8 +295,14 @@ class App extends React.Component {
                                             />
                                         ))}
                                     </div>
-                                    <a href={moreLink} target="_blank" rel="noopener noreferrer">
-                                        <button id="moreBtn">more</button>
+                                    <a
+                                        href={moreLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <button id="moreBtn">
+                                            more
+                                        </button>
                                     </a>
                                 </div>
                                 <div className="right item"></div>
@@ -279,92 +311,150 @@ class App extends React.Component {
                         <MobileView>
                             <div className="m__body">
                                 <div className="m__topBar">
-                                    <h1 id="m__h1">중고거래신용보증협회</h1>
+                                    <h1 id="m__h1">
+                                        중고거래신용보증협회
+                                    </h1>
                                     <div className="m__nav">
                                         <a
                                             href={landingLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <button className="m__button">Login</button>
+                                            <button className="m__button">
+                                                Login
+                                            </button>
                                         </a>
                                         <a
                                             href={landingLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <button className="m__button">Join</button>
+                                            <button className="m__button">
+                                                Join
+                                            </button>
                                         </a>
                                     </div>
                                 </div>
                                 <div className="m__information">
                                     <div className="m__private">
                                         <img
-                                            src={process.env.PUBLIC_URL + "/img/profile.png"}
+                                            src={
+                                                process.env
+                                                    .PUBLIC_URL +
+                                                "/img/profile.png"
+                                            }
                                             alt=""
                                         ></img>
                                         <div className="m__text">
                                             <p id="m__info">한태희</p>
-                                            <p id="m__phoneNum">010-6349-1413</p>
+                                            <p id="m__phoneNum">
+                                                010-6349-1413
+                                            </p>
                                         </div>
-                                        <p id="m__private_in">정회원</p>
+                                        <p id="m__private_in">
+                                            정회원
+                                        </p>
                                     </div>
                                     <div className="m__history">
                                         <div className="m__jungo m__platform">
                                             <div className="m__jungoTop">
-                                                <p id="m__nickname">중고나라: melbourner</p>
+                                                <p id="m__nickname">
+                                                    중고나라:
+                                                    melbourner
+                                                </p>
                                             </div>
                                             <div className="m__jungoBottom">
                                                 <div className="m__visit item">
-                                                    <p id="m__bottomText">방문</p>
-                                                    <p id="m__bottomNum">1,696</p>
+                                                    <p id="m__bottomText">
+                                                        방문
+                                                    </p>
+                                                    <p id="m__bottomNum">
+                                                        1,719
+                                                    </p>
                                                 </div>
                                                 <div className="m__post item">
-                                                    <p id="m__bottomText">게시글</p>
-                                                    <p id="m__bottomNum">76</p>
+                                                    <p id="m__bottomText">
+                                                        게시글
+                                                    </p>
+                                                    <p id="m__bottomNum">
+                                                        79
+                                                    </p>
                                                 </div>
                                                 <div className="m__comment item">
-                                                    <p id="m__bottomText">댓글</p>
-                                                    <p id="m__bottomNum">272</p>
+                                                    <p id="m__bottomText">
+                                                        댓글
+                                                    </p>
+                                                    <p id="m__bottomNum">
+                                                        273
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="m__thunder m__platform">
                                             <div className="m__thunderTop">
-                                                <p id="m__nickname">번개장터: hantaehee9</p>
+                                                <p id="m__nickname">
+                                                    번개장터:
+                                                    hantaehee9
+                                                </p>
                                             </div>
                                             <div className="m__thunderBottom">
                                                 <div className="m__visit item">
-                                                    <p id="m__bottomText">후기</p>
-                                                    <p id="m__bottomNum">0</p>
+                                                    <p id="m__bottomText">
+                                                        후기
+                                                    </p>
+                                                    <p id="m__bottomNum">
+                                                        0
+                                                    </p>
                                                 </div>
                                                 <div className="m__post item">
-                                                    <p id="m__bottomText">상품</p>
-                                                    <p id="m__bottomNum">2</p>
+                                                    <p id="m__bottomText">
+                                                        상품
+                                                    </p>
+                                                    <p id="m__bottomNum">
+                                                        2
+                                                    </p>
                                                 </div>
                                                 <div className="m__comment item">
-                                                    <p id="m__bottomText">팔로워</p>
-                                                    <p id="m__bottomNum">0</p>
+                                                    <p id="m__bottomText">
+                                                        팔로워
+                                                    </p>
+                                                    <p id="m__bottomNum">
+                                                        0
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div className="m__carrot m__platform">
                                             <div className="m__carrotTop">
-                                                <p id="m__nickname">당근마켓: 닉네임</p>
+                                                <p id="m__nickname">
+                                                    당근마켓: 닉네임
+                                                </p>
                                             </div>
                                             <div className="m__carrotBottom">
                                                 <div className="m__visit item">
-                                                    <p id="m__bottomText">후기</p>
-                                                    <p id="m__bottomNum">0</p>
+                                                    <p id="m__bottomText">
+                                                        후기
+                                                    </p>
+                                                    <p id="m__bottomNum">
+                                                        0
+                                                    </p>
                                                 </div>
                                                 <div className="m__post item">
-                                                    <p id="m__bottomText">팔로잉</p>
-                                                    <p id="m__bottomNum">0</p>
+                                                    <p id="m__bottomText">
+                                                        팔로잉
+                                                    </p>
+                                                    <p id="m__bottomNum">
+                                                        0
+                                                    </p>
                                                 </div>
                                                 <div className="m__comment item">
-                                                    <p id="m__bottomText">팔로워</p>
-                                                    <p id="m__bottomNum">0</p>
+                                                    <p id="m__bottomText">
+                                                        팔로워
+                                                    </p>
+                                                    <p id="m__bottomNum">
+                                                        0
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -386,8 +476,14 @@ class App extends React.Component {
                                             />
                                         ))}
                                     </div>
-                                    <a href={moreLink} target="_blank" rel="noopener noreferrer">
-                                        <button id="m__moreBtn">more</button>
+                                    <a
+                                        href={moreLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <button id="m__moreBtn">
+                                            more
+                                        </button>
                                     </a>
                                 </div>
                             </div>
