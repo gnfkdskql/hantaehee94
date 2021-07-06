@@ -13,8 +13,8 @@ const postList = [
         poster: "/img/11.PNG",
         summary:
             "https://m.bunjang.co.kr/products/158036107?utm_source=kakaotalk&utm_campaign=viral_kakaotalk&utm_medium=message",
-        junggo: "https://cafe.naver.com/joonggonara/851775886",
-        thunder: "https://m.bunjang.co.kr/products/158173006",
+        junggo: "https://cafe.naver.com/joonggonara/852486880",
+        thunder: "https://stuv4.app.goo.gl/5dFn1",
         carrot: "",
     },
     {
