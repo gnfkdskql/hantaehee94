@@ -1,6 +1,9 @@
 import React from "react";
 import axios from "axios";
 import Post from "./Post.js";
+import Carrot from "./flatform/Carrot.js";
+import Thunder from "./flatform/Thunder.js";
+import Joonggo from "./flatform/Joonggo.js";
 import "./App.css";
 import HorizonLine from "./utils/HorizontallLine.js";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -215,9 +218,6 @@ class App extends React.Component {
                     <div>
                         <BrowserView>
                             <div className="topBar">
-                                <h1 id="headline">
-                                    중고거래신용보증협회
-                                </h1>
                                 <div className="nav">
                                     <a
                                         href={landingLink}
@@ -228,6 +228,7 @@ class App extends React.Component {
                                             Login
                                         </button>
                                     </a>
+                                    <div className="nav_vertical_line"></div>
                                     <a
                                         href={landingLink}
                                         target="_blank"
@@ -238,50 +239,42 @@ class App extends React.Component {
                                         </button>
                                     </a>
                                 </div>
+                                <h1 id="headline">
+                                    중고거래신용보증협회
+                                </h1>
+                                <div className="topBar_right">
+                                    <rect id="topBar_search">
+                                        <img
+                                            src={
+                                                process.env
+                                                    .PUBLIC_URL +
+                                                "/img/search.png"
+                                            }
+                                            alt=""
+                                        />
+                                        <p>Search</p>
+                                    </rect>
+                                </div>
                             </div>
 
                             <div className="main_content">
-                                <div className="left item"></div>
-                                <div className="information">
-                                    <div className="private">
-                                        <HorizonLine />
-                                        <h2 id="info">한태희</h2>
-                                        <p id="phoneNum">
-                                            010-6349-1413
-                                        </p>
-                                        <p id="private_in">정회원</p>
-                                        <HorizonLine />
-                                    </div>
-                                    <div className="history">
-                                        <p id="nickname">
-                                            중고나라: melbourner
-                                        </p>
-                                        <p id="detail">
-                                            방문: 1,719회
-                                            <br />
-                                            게시글: 79개
-                                            <br />
-                                            댓글: 273개
-                                        </p>
-                                        <p id="nickname">
-                                            번개장터: hantaehee9
-                                        </p>
-                                        <p id="detail">
-                                            후기: 0<br />
-                                            상품: 2<br />
-                                            팔로워: 0
-                                        </p>
-                                        <p id="nickname">
-                                            당근마켓: 닉네임
-                                        </p>
-
-                                        <p id="detail">활동내역</p>
-                                        <div className="last_underline">
-                                            <HorizonLine />
-                                        </div>
-                                    </div>
+                                <div className="left_area">
+                                    <div id="profile_circle"></div>
+                                    <p id="profile_name">한태희</p>
+                                    <p id="profile_info">
+                                        010-6349-1413
+                                        <br />
+                                        hantaehee94@naver.com
+                                    </p>
+                                    <HorizonLine />
                                 </div>
-                                <div className="item main_page">
+                                <div className="main_page">
+                                    <div className="main_info">
+                                        <Carrot />
+                                        <Thunder />
+                                        <Joonggo />
+                                    </div>
+                                    <p id="trade_text">판매내역</p>
                                     <div className="posts">
                                         {posts.map((post) => (
                                             <Post
@@ -300,12 +293,11 @@ class App extends React.Component {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <button id="moreBtn">
+                                        {/* <button id="moreBtn">
                                             more
-                                        </button>
+                                        </button> */}
                                     </a>
                                 </div>
-                                <div className="right item"></div>
                             </div>
                         </BrowserView>
                         <MobileView>

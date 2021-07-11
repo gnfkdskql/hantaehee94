@@ -1,12 +1,18 @@
 .posts .post {
+    height: 300px;
+    width: 290px;
     background-color: white;
-    margin-bottom: 10px;
     /* font-weight: 300; */
     /* padding: 20px; */
-    border-radius: 5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
     /* color: #adaeb9; */
     /* box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3),
         0 -6px 16px -6px rgba(0, 0, 0, 0.025); */
+}
+p {
+    color: #191919;
 }
 
 .postDropdown {
@@ -22,9 +28,14 @@
 } */
 
 .post img {
-    /* position: relative; */
-    width: 230px;
-    height: 230px;
+    align-self: center;
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #a4a4a4;
+
     /* width: 100%; */
     /* margin-right: 30px; */
     /* box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3),
@@ -43,10 +54,40 @@
     width: 200px;
     white-space: nowrap;
     overflow: hidden;
+    margin-top: 18px;
+    margin-bottom: 18px;
     text-overflow: ellipsis;
-    margin-bottom: 5px;
     font-size: 16px;
     color: black;
+}
+
+.dropdown:hover {
+    background-color: #4c84ff;
+}
+
+.dropdown {
+    border-radius: 0 0 15px 15px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .btn_area {
+    border-radius: 0 0 15px 15px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.btn_link:hover {
+    color: white;
+}
+
+.btn_link {
+    color: #999999;
+    font-size: 20px;
 }
 /* 
 .post .post__genres {
