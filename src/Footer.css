@@ -1,0 +1,26 @@
+.footer_area {
+    height: 160px;
+    background-color: white;
+    margin-bottom: 0;
+    display: flex;
+}
+
+.footer_left {
+    width: 20%;
+    text-align: center;
+    align-self: center;
+}
+
+.footer_right {
+    width: 80%;
+    align-self: center;
+    display: flex;
+}
+
+.item:nth-child(1) {
+    flex-grow: 4;
+}
+.item:nth-child(2) {
+    align-self: center;
+    flex-grow: 1;
+}

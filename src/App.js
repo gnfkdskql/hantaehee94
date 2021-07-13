@@ -4,6 +4,8 @@ import Post from "./Post.js";
 import Carrot from "./flatform/Carrot.js";
 import Thunder from "./flatform/Thunder.js";
 import Joonggo from "./flatform/Joonggo.js";
+import Footer from "./Footer.js";
+
 import "./App.css";
 import HorizonLine from "./utils/HorizontallLine.js";
 import { BrowserView, MobileView } from "react-device-detect";
@@ -299,6 +301,7 @@ class App extends React.Component {
                                     </a>
                                 </div>
                             </div>
+                            <Footer />
                         </BrowserView>
                         <MobileView>
                             <div className="m__body">
