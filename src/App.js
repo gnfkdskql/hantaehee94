@@ -220,30 +220,9 @@ class App extends React.Component {
                     <div>
                         <BrowserView>
                             <div className="topBar">
-                                <div className="nav">
-                                    <a
-                                        href={landingLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <button className="button">
-                                            Login
-                                        </button>
-                                    </a>
-                                    <div className="nav_vertical_line"></div>
-                                    <a
-                                        href={landingLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <button className="button">
-                                            Join
-                                        </button>
-                                    </a>
-                                </div>
-                                <h1 id="headline">
-                                    중고거래신용보증협회
-                                </h1>
+                                <h1 id="headline">스튜디오태아</h1>
+                                <div className="topBar_center"></div>
+
                                 <div className="topBar_right">
                                     <rect id="topBar_search">
                                         <img
@@ -256,6 +235,27 @@ class App extends React.Component {
                                         />
                                         <p>Search</p>
                                     </rect>
+                                    <div className="nav">
+                                        <a
+                                            href={landingLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <button className="button">
+                                                Login
+                                            </button>
+                                        </a>
+                                        <div className="nav_vertical_line"></div>
+                                        <a
+                                            href={landingLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <button className="button">
+                                                Join
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 

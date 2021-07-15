@@ -7,8 +7,13 @@
 
 .footer_left {
     width: 20%;
+
     text-align: center;
     align-self: center;
+}
+.footer_left p {
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .footer_right {
